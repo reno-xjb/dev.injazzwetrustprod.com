@@ -2831,6 +2831,10 @@ input, select, textarea {
 				width: 60%;
 			}
 
+			.tiles article:last-child:nth-child(odd) {
+			       width: 100%;
+		       }	       
+
 			.tiles article:nth-child(6n - 5):before {
 				background-color: #6fc3df;
 			}
