@@ -3853,7 +3853,7 @@ input, select, textarea {
 			max-height: 100vh;
 			opacity: 0;
 			overflow: auto;
-			/*text-align: center;*/
+			text-align: left;
 			visibility: hidden;
 			width: 18em;
 		}
@@ -3902,7 +3902,7 @@ input, select, textarea {
 
 			#menu ul.sub-links > li > a {
 				position: relative;
-				padding: 0 0 0 2.75rem;
+				padding: 0 0 0 2em;
 			}		
 
 			#menu ul.sub-links > li > a:before, #menu ul.sub-links > li > a:after {
@@ -3912,9 +3912,9 @@ input, select, textarea {
 				transition: opacity 0.2s ease-in-out;
 				background-position: center;
 				background-repeat: no-repeat;
-				background-size: 1.25rem;
-				background-position: calc(100% - 1rem) center;
-			        padding-right: 2.75rem;	
+				background-size: 2em;
+				background-position: calc(100% - 2em) center;
+			        padding-right: 3em;	
 				content: '';
 				display: block;
 				position: absolute;
