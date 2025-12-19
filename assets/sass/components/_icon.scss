@@ -33,9 +33,9 @@
 
 		&.alt {
 			&:before {
-				background-color: _palette(fg-bold);
+				background-color: _palette(secondary-bold);
 				border-radius: 100%;
-				color: _palette(bg);
+				color: _palette(background);
 				display: inline-block;
 				height: 2em;
 				line-height: 2em;
@@ -53,13 +53,13 @@
 
 			&:hover {
 				&:before {
-					background-color: _palette(accent1);
+					background-color: _palette(primary);
 				}
 			}
 
 			&:active {
 				&:before {
-					background-color: desaturate(darken(_palette(accent1), 15), 5);
+					background-color: desaturate(darken(_palette(primary), 15), 5);
 				}
 			}
 		}
