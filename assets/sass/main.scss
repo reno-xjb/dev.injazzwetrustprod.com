@@ -37,6 +37,10 @@
 				@include padding(3em, 0);
 				width: calc(100% - 3em);
 			}
+			
+		}
+		> .justified {
+			text-align: justify;
 		}
 	}
 
