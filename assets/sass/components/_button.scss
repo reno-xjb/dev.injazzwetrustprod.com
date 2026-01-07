@@ -113,7 +113,22 @@
 
 			&:hover, &:active {
 				background-color: _palette(primary);
-				color: _palette(primary) !important;
+				//color: _palette(primary) !important;
+			}
+
+			&:active {
+				background-color: desaturate(darken(_palette(primary), 15), 5);
+			}
+		}
+		
+		&.primary-alt {
+			background-color: _palette(background);
+			box-shadow: none;
+			color: _palette(secondary-bold);
+
+			&:hover, &:active {
+				background-color: _palette(primary);
+				color: _palette(background) !important;
 			}
 
 			&:active {

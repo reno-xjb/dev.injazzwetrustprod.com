@@ -2176,13 +2176,40 @@ button.primary:active,
 .button.primary:hover,
 .button.primary:active {
   background-color: #d89215;
-  color: #d89215 !important;
 }
 input[type=submit].primary:active,
 input[type=reset].primary:active,
 input[type=button].primary:active,
 button.primary:active,
 .button.primary:active {
+  background-color: rgb(142.2659810127, 97.7416869523, 18.2340189873);
+}
+input[type=submit].primary-alt,
+input[type=reset].primary-alt,
+input[type=button].primary-alt,
+button.primary-alt,
+.button.primary-alt {
+  background-color: #ede7e7;
+  box-shadow: none;
+  color: #2f2613;
+}
+input[type=submit].primary-alt:hover, input[type=submit].primary-alt:active,
+input[type=reset].primary-alt:hover,
+input[type=reset].primary-alt:active,
+input[type=button].primary-alt:hover,
+input[type=button].primary-alt:active,
+button.primary-alt:hover,
+button.primary-alt:active,
+.button.primary-alt:hover,
+.button.primary-alt:active {
+  background-color: #d89215;
+  color: #ede7e7 !important;
+}
+input[type=submit].primary-alt:active,
+input[type=reset].primary-alt:active,
+input[type=button].primary-alt:active,
+button.primary-alt:active,
+.button.primary-alt:active {
   background-color: rgb(142.2659810127, 97.7416869523, 18.2340189873);
 }
 input[type=submit].disabled, input[type=submit]:disabled,
