@@ -1772,6 +1772,11 @@ a.icon.alt:active:before, a.icon.alt-inverted:active:before {
 .image.fit img {
   width: 100%;
 }
+.image.square img {
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
 .image.main {
   display: block;
   margin: 2.5em 0;
@@ -2492,7 +2497,7 @@ button:disabled,
   top: 0;
   width: 100%;
 }
-.spotlights > section > .content {
+.spotlights > section > .content, .spotlights > section > .content-only {
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -2510,15 +2515,20 @@ button:disabled,
   -ms-align-items: center;
   align-items: center;
   padding: 2em 3em 0.1em 3em;
-  width: 70%;
 }
-.spotlights > section > .content > .inner {
+.spotlights > section > .content > .inner, .spotlights > section > .content-only > .inner {
   margin: 0 auto;
   max-width: 100%;
   width: 65em;
 }
-.spotlights > section > .content h1, .spotlights > section > .content h2, .spotlights > section > .content h3, .spotlights > section > .content h4, .spotlights > section > .content h5, .spotlights > section > .content h6, .spotlights > section > .content p, .spotlights > section > .content strong {
+.spotlights > section > .content h1, .spotlights > section > .content h2, .spotlights > section > .content h3, .spotlights > section > .content h4, .spotlights > section > .content h5, .spotlights > section > .content h6, .spotlights > section > .content p, .spotlights > section > .content strong, .spotlights > section > .content-only h1, .spotlights > section > .content-only h2, .spotlights > section > .content-only h3, .spotlights > section > .content-only h4, .spotlights > section > .content-only h5, .spotlights > section > .content-only h6, .spotlights > section > .content-only p, .spotlights > section > .content-only strong {
   color: #ede7e7 !important;
+}
+.spotlights > section > .content {
+  width: 70%;
+}
+.spotlights > section > .content-only {
+  width: 100%;
 }
 .spotlights > section:nth-child(2n) {
   -moz-flex-direction: row-reverse;

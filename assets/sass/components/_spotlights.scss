@@ -48,13 +48,12 @@
 				}
 			}
 
-			> .content {
+			> .content, > .content-only {
 				@include vendor('display', 'flex');
 				@include vendor('flex-direction', 'column');
 				@include vendor('justify-content', 'center');
 				@include vendor('align-items', 'center');
 				@include padding(2em, 3em);
-				width: 70%;
 
 				> .inner {
 					margin: 0 auto;
@@ -64,6 +63,14 @@
 				h1, h2, h3, h4, h5, h6, p, strong {
 					color: _palette(background) !important;
 				}
+			}
+			
+			> .content {
+				width: 70%;
+			}
+
+			> .content-only {
+				width: 100%;
 			}
 
 			&:nth-child(2n) {

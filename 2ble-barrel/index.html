@@ -52,6 +52,7 @@
 											<li><a href="#bio">Bio</a></li>
 											<li><a href="#audio">Audio</a></li>
 											<li><a href="#pro">Espace Pro</a></li>
+											<li><a href="#photos">Photos</a></li>
 										</ul>
 									</li>
 								</ul>		
@@ -75,7 +76,7 @@
 					<section id="banner" class="project">
 						<div class="inner">
 							<span class="image">
-								<img src="/images/2ble-Barrel-Groupe-Logo.png" alt="Logo du groupe 2ble Barrel" />
+								<img src="/images/2ble-barrel/2ble-Barrel-Photo-Groupe.png" alt="Logo du groupe 2ble Barrel" />
 							</span>
 							<header class="major">
 								<h1>2ble Barrel</h1>
@@ -107,7 +108,7 @@
 							<section class="spotlights">
 								<section id="bio">
 									<div class="image">
-										<img src="/images/2ble-Barrel-Auditorium-Tarbes-Lucile-Fourcade-copyright-Cedrick-Not.png" alt="Photo 2ble Barrel - Lucile Fourcade au saxophone baryton - copyright Cedrick Nöt" data-position="center center" />
+										<img src="/images/2ble-barrel/2ble-Barrel-La-Baleine-Blanche-Julie-Chochon-copyright-Cedrick-Not.png" alt="Photo 2ble Barrel - Lucile Fourcade au saxophone baryton - copyright Cedrick Nöt" data-position="center center" />
 									</div>
 									<div class="content">
 										<header class="major">
@@ -133,7 +134,7 @@
 								</section>
 								<section id="audio">
 									<div class="image">
-										<img src="/images/2ble-Barrel-TLB-Marius-Constant-copyright-Cedrick-Not.png" alt="Photo 2ble Barrel - Marius Constant à la guitare - copyright Cedrick Nöt" data-position="center center" />
+										<img src="/images/2ble-barrel/2ble-Barrel-TLB-Marius-Constant-copyright-Cedrick-Not.png" alt="Photo 2ble Barrel - Marius Constant à la guitare - copyright Cedrick Nöt" data-position="center center" />
 									</div>
 									<div class="content">
 										<header class="major">
@@ -152,7 +153,7 @@
 								</section>
 								<section id="pro">
 									<div class="image">
-										<img src="/images/2ble-Barrel-Auditorium-Tarbes-Renaud-Perrot-copyright-Cedrick-Not.png" alt="Photo 2ble Barrel - Marius Constant à la guitare - copyright Cedrick Nöt" data-position="center center" />
+										<img src="/images/2ble-barrel/2ble-Barrel-Auditorium-Tarbes-Renaud-Perrot-copyright-Cedrick-Not.png" alt="Photo 2ble Barrel - Marius Constant à la guitare - copyright Cedrick Nöt" data-position="center center" />
 									</div>
 									<div class="content">
 										<header class="major">
@@ -162,6 +163,17 @@
 											<li><a href="https://drive.google.com/drive/folders/1rnCBX1bmqy_ewYmz1oR2ENp12wh4kV2j" target="_blank" class="button primary-inverted icon solid fa-download">Fiches techniques/Rider</a></li>
 											<li><a href="https://drive.google.com/drive/folders/10NQK0Kw0JhhqCW4Eu843yxXyb5feyX6B" target="_blank" class="button primary-inverted icon solid fa-download">EPK/Photos</a></li>
 										</ul>
+									</div>
+								</section>
+								<section id="photos">
+									<div class="content-only">
+										<header class="major">
+											<h2>Photos</h2>
+										</header>
+										<div class="box alt">
+											<div id="gallery" class="row gtr-50 gtr-uniform">
+											</div>
+										</div>
 									</div>
 								</section>
 							</section>
@@ -228,8 +240,76 @@
 			<script src="/assets/js/breakpoints.min.js"></script>
 			<script src="/assets/js/util.js"></script>
 			<script src="/assets/js/main.js"></script>
+			<script src="/assets/js/spotlight.bundle.js"></script>
 			<script>
 				document.addEventListener("DOMContentLoaded", function() {
+
+					/*document.getElementsByID
+
+					<div class="col-2 col-3-medium col-4-small col-6-xsmall"><a class="spotlight image fit" href="/images/2ble-barrel/2ble-Barrel-La-Baleine-Blanche-Julie-Chochon-copyright-Cedrick-Not.png">
+							<img src="/images/2ble-barrel/2ble-Barrel-La-Baleine-Blanche-Julie-Chochon-copyright-Cedrick-Not.png">
+					</a></div>
+*/
+					const images = [
+						'2Ble Barrel - La Baleine Blanche - Cedrick Not (111).png',
+'2Ble Barrel - La Baleine Blanche - Cedrick Not (116).png',
+'2Ble Barrel - La Baleine Blanche - Cedrick Not (121).png',
+'2Ble Barrel - La Baleine Blanche - Cedrick Not (122).png',
+'2Ble Barrel - La Baleine Blanche - Cedrick Not (127).png',
+'2Ble Barrel - La Baleine Blanche - Cedrick Not (128).png',
+'2Ble Barrel - La Baleine Blanche - Cedrick Not (129).png',
+'2Ble Barrel - La Baleine Blanche - Cedrick Not (130).png',
+'2Ble Barrel - La Baleine Blanche - Cedrick Not (132).png',
+'2Ble Barrel - La Baleine Blanche - Cedrick Not (137).png',
+'2Ble Barrel - La Baleine Blanche - Cedrick Not (151).png',
+'2Ble Barrel - La Baleine Blanche - Cedrick Not (164).png',
+'2Ble Barrel - La Baleine Blanche - Cedrick Not (170).png',
+'2Ble Barrel - La Baleine Blanche - Cedrick Not (184).png',
+'2Ble Barrel - La Baleine Blanche - Cedrick Not (185).png',
+'2Ble Barrel - La Baleine Blanche - Cedrick Not (186).png',
+'2Ble Barrel - La Baleine Blanche - Cedrick Not (191).png',
+'2Ble Barrel - La Baleine Blanche - Cedrick Not (196).png',
+'2Ble Barrel - La Baleine Blanche - Cedrick Not (2).png',
+'2Ble Barrel - TLB - Auditorium Tarbes - Cedrick Not - 029.png',
+'2Ble Barrel - TLB - Auditorium Tarbes - Cedrick Not - 048.png',
+'2Ble Barrel - TLB - Auditorium Tarbes - Cedrick Not - 049.png',
+'2Ble Barrel - TLB - Auditorium Tarbes - Cedrick Not - 050.png',
+'2Ble Barrel - TLB - Auditorium Tarbes - Cedrick Not - 051.png',
+'2Ble Barrel - TLB - Auditorium Tarbes - Cedrick Not - 054.png',
+'2Ble Barrel - TLB - Auditorium Tarbes - Cedrick Not - 086.png',
+'2Ble Barrel - TLB - Auditorium Tarbes - Cedrick Not - 087.png',
+'2Ble Barrel - TLB - Auditorium Tarbes - Cedrick Not - 152.png',
+'2Ble Barrel - TLB - Auditorium Tarbes - Cedrick Not - 155.png',
+'2Ble Barrel - TLB - Auditorium Tarbes - Cedrick Not - 162.png',
+'2Ble Barrel - TLB - Auditorium Tarbes - Cedrick Not - 163.png',
+'2Ble Barrel - TLB - Auditorium Tarbes - Cedrick Not - 164.png',
+'2Ble Barrel - TLB - Auditorium Tarbes - Cedrick Not - 168.png',
+'2Ble Barrel - TLB - Auditorium Tarbes - Cedrick Not - 169.png',
+'2Ble Barrel - TLB - Auditorium Tarbes - Cedrick Not - 183 (1).png',
+'2Ble Barrel - TLB - Auditorium Tarbes - Cedrick Not - 185.png',
+'2Ble Barrel - TLB - Auditorium Tarbes - Cedrick Not - 186.png',
+'2Ble Barrel - TLB - Auditorium Tarbes - Cedrick Not - 194.png',
+'2Ble Barrel - TLB - Auditorium Tarbes - Cedrick Not - 195.png',
+'2Ble Barrel - TLB - Auditorium Tarbes - Cedrick Not - 198.png',
+					];
+					const imageDir = '/images/2ble-barrel/gallery';
+
+					const gallery = document.getElementById('gallery');
+					if (gallery) {
+						for (let imagePath of images) {
+							let img = document.createElement('img');
+							img.src = `${imageDir}/${imagePath}`;
+							let a = document.createElement('a');
+							a.className = 'spotlight image fit square';
+							a.href = `${imageDir}/${imagePath}`;
+							a.appendChild(img);
+							let div = document.createElement('div');
+							div.className = 'col-2 col-3-medium col-4-small col-6-xsmall';
+							div.appendChild(a);
+							gallery.appendChild(div);
+					
+						}
+					}
 
 					const stopBandcampPlayersExcept = function(id) {
 						const wrappers = document.getElementsByClassName('bandcamp-wrapper');
