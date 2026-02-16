@@ -2191,6 +2191,7 @@ button.primary:active,
 .button.primary:hover,
 .button.primary:active, .bit-button.primary:hover, .bit-button.primary:active, .bit-follow-section-cta.primary:hover, .bit-follow-section-cta.primary:active {
   background-color: #d89215;
+  color: #ede7e7 !important;
 }
 input[type=submit].primary:active,
 input[type=reset].primary:active,

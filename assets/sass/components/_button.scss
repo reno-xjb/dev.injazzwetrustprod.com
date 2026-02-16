@@ -113,7 +113,7 @@
 
 			&:hover, &:active {
 				background-color: _palette(primary);
-				//color: _palette(primary) !important;
+				color: _palette(background) !important;
 			}
 
 			&:active {
