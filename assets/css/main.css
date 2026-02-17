@@ -1876,6 +1876,12 @@ ul.actions.stacked li {
 ul.actions.stacked li:first-child {
   padding-top: 0;
 }
+ul.actions.stacked.special {
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
 ul.actions.fit {
   width: calc(100% + 1em);
 }
@@ -2124,6 +2130,10 @@ button.next:after,
   -webkit-transition: opacity 0.2s ease-in-out;
   -ms-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
+  -moz-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
   background-position: center right;
   background-repeat: no-repeat;
   background-size: 36px 24px;
@@ -2135,6 +2145,20 @@ button.next:after,
   top: 0;
   vertical-align: middle;
   width: 36px;
+}
+input[type=submit].next.up:before, input[type=submit].next.up:after,
+input[type=reset].next.up:before,
+input[type=reset].next.up:after,
+input[type=button].next.up:before,
+input[type=button].next.up:after,
+button.next.up:before,
+button.next.up:after,
+.button.next.up:before,
+.button.next.up:after, .bit-button.next.up:before, .bit-button.next.up:after, .bit-follow-section-cta.next.up:before, .bit-follow-section-cta.next.up:after {
+  -moz-transform: scale(1, -1) rotate(15deg);
+  -webkit-transform: scale(1, -1) rotate(15deg);
+  -ms-transform: scale(1, -1) rotate(15deg);
+  transform: scale(1, -1) rotate(15deg);
 }
 input[type=submit].next:before,
 input[type=reset].next:before,
@@ -3015,6 +3039,10 @@ body.is-preload #header.alt {
   -webkit-align-items: center;
   -ms-align-items: center;
   align-items: center;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
   margin: 0 0 2em 0;
 }
 #banner > .inner .content > * {

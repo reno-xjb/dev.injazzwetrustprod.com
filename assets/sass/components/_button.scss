@@ -72,6 +72,7 @@
 
 			&:before, &:after {
 				@include vendor('transition', 'opacity #{_duration(transition)} ease-in-out');
+				@include vendor('transform', 'rotate(15deg)');
 				background-position: center right;
 				background-repeat: no-repeat;
 				background-size: 36px 24px;
@@ -83,6 +84,12 @@
 				top: 0;
 				vertical-align: middle;
 				width: 36px;
+			}
+
+			&.up {
+				&:before, &:after {
+					@include vendor('transform', 'scale(1, -1) rotate(15deg)');			
+				}
 			}
 
 			&:before {

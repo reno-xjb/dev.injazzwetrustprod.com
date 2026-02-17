@@ -41,6 +41,10 @@
 					padding-top: 0;
 				}
 			}
+			
+			&.special {
+				@include vendor('align-items', 'center');
+			}
 		}
 
 		&.fit {
