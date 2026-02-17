@@ -133,7 +133,7 @@
 
 				// Set position.
 					if (x = $img.data('position'))
-						$image.css('background-position', x);
+						$this.css('background-position', x);
 
 				// Hide original.
 					$image.hide();

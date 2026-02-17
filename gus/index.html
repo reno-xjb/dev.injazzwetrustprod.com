@@ -92,6 +92,7 @@
 											<li><a href="#bio">Bio</a></li>
 											<li><a href="#audio">Audio</a></li>
 											<li><a href="#concerts">Concerts</a></li>
+											<li><a href="#photos">Photos</a></li>
 										</ul>
 									</li>
 									<li><a href="/the-dillingers">The Dillingers</a></li>
@@ -114,7 +115,7 @@
 					<section id="banner" class="project">
 						<div class="inner">
 							<span class="image">
-								<img src="/images/gus/Gus-Groupe-Logo.png" alt="Logo du groupe GuS !" />
+								<img src="/images/gus/Gus-Groupe.png" alt="Logo du groupe GuS !" />
 							</span>
 							<header class="major">
 								<h1>GuS !</h1>
@@ -146,7 +147,7 @@
 							<section class="spotlights">
 								<section id="bio">
 									<div class="image">
-										<img src="/images/gus/Gus-Groupe-Logo.png" alt="Logo du groupe Gus" data-position="center center" />
+										<img src="/images/gus/Gus-Groupe.png" alt="Logo du groupe Gus" data-position="center center" />
 									</div>
 									<div class="content">
 										<header class="major">
@@ -187,6 +188,19 @@
 									<div id="bandsintown" data-band="gus" data-date="all"></div>
 								</div>
 							</section>
+							<section class="spotlights">
+								<section id="photos">
+                                                                        <div class="content-only">
+                                                                                <header class="major">
+                                                                                        <h2>Photos</h2>
+                                                                                </header>
+                                                                                <div class="box alt">
+                                                                                        <div id="gallery" class="row gtr-50 gtr-uniform">
+                                                                                        </div>
+                                                                                </div>
+                                                                        </div>
+                                                                </section>
+							</section>
 
 						<!-- Contact -->
 						<section id="contact">
@@ -223,8 +237,9 @@
                                                                 <li><a href="https://injazzwetrustprod.bandcamp.com/" rel="noopener" target="_blank" class="icon brands fa-bandcamp"><span class="label">Bandcamp</span></a></li>
                                                                 <li><a href="https://youtube.com/@InJazzWeTrustProd" rel="noopener" target="_blank" class="icon brands fa-youtube"><span class="label">Youtube</span></a></li>
                                                         </ul>
-                                                        <ul class="copyright">
+							<ul class="copyright">
                                                                 <li>&copy; In Jazz We Trust Prod. 2025-<script>document.write(new Date().getFullYear())</script></li>
+                                                                <li>Crédits Photos &copy; <a href="https://www.instagram.com/cedrick_not" target="_blank" rel="noopener">Cédrick Nöt</a></li>
                                                                 <li>Design: <a href="https://html5up.net" target="_blank" rel="noopener">HTML5 UP</a> & <a href="https://github.com/reno-xjb" target="_blank" rel="noopener">reno-xjb</a></li>
                                                                 <li>SVG Icons: <a href="https://handcrafts.undraw.co" target="_blank" rel="noopener">unDraw Handcrafts</a></li>
                                                         </ul>
@@ -240,7 +255,43 @@
 			<script src="/assets/js/breakpoints.min.js"></script>
 			<script src="/assets/js/util.js"></script>
 			<script src="/assets/js/main.js"></script>
+			<script src="/assets/js/spotlight.bundle.js"></script>
 			<script src="/assets/js/bandsintown.js"></script>
+			<script>
+                                document.addEventListener("DOMContentLoaded", function() {
+
+                                        const images = [
+						'Gus-Julie-Chochon-Simon-Barbe-copyright-Cedrick-Not-14.png',
+						'Gus-Julie-Chochon-Simon-Barbe-copyright-Cedrick-Not-41.png',
+						'Gus-Julie-Chochon-Simon-Barbe-copyright-Cedrick-Not-77.png',
+						'Gus-Julie-Chochon-Simon-Barbe-copyright-Cedrick-Not-23.png',
+						'Gus-Julie-Chochon-Simon-Barbe-copyright-Cedrick-Not-57.png',
+						'Gus-Julie-Chochon-Simon-Barbe-copyright-Cedrick-Not-8.png', 
+						'Gus-Julie-Chochon-Simon-Barbe-copyright-Cedrick-Not-26.png',
+						'Gus-Julie-Chochon-Simon-Barbe-copyright-Cedrick-Not-59.png',
+						'Gus-Julie-Chochon-Simon-Barbe-copyright-Cedrick-Not-33.png', 
+						'Gus-Julie-Chochon-Simon-Barbe-copyright-Cedrick-Not-69.png',
+                                        ];
+                                        const imageDir = '/images/gus/gallery';
+
+                                        const gallery = document.getElementById('gallery');
+                                        if (gallery) {
+                                                for (let imagePath of images) {
+                                                        let img = document.createElement('img');
+                                                        img.src = `${imageDir}/${imagePath}`;
+                                                        let a = document.createElement('a');
+                                                        a.className = 'spotlight image fit square';
+                                                        a.href = `${imageDir}/${imagePath}`;
+                                                        a.appendChild(img);
+                                                        let div = document.createElement('div');
+                                                        div.className = 'col-2 col-3-medium col-4-small col-6-xsmall';
+                                                        div.appendChild(a);
+                                                        gallery.appendChild(div);
+
+                                                }
+                                        }
+                                });
+			</script>
 
 	</body>
 </html>
