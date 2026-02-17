@@ -210,23 +210,27 @@
 
 
 				<!-- Popup -->
-					<dialog id="popup" closeby="any" style="width: 80%; height: 80%;">
+					<dialog id="popup" closedby="any">
 						<!--div class="inner"-->
-						<form method="dialog" style="right: 0;">
-							<button autofocus>Fermer</button>
+						<form method="dialog">
+							<button class="close">Fermer</button>
 						</form>
 						<div class="row gtr-100 gtr-uniform aln-center aln-middle">
-							<div class="col-6">
-							<span class="image">
-								<img width="350px" loading="lazy" style="max-width: 100%;" src="/images/2ble-barrel/Mampy-2ble-Barrel-Take-The-Ska-Train-Le-Taquin-21-02-2026.png" alt="Affiche du concert de Mampy et 2ble Barrel au Taquin le 26 février 2026" />
-							</span>
+							<div class="col-6 col-12-small">
+								<p>In Jazz We Trust Prod présente :</p>
+								<p>
+									<strong>2ble Barrel + Mampy : Take The 'Ska' Train !</strong>
+									<br />
+									<em>Samedi 21 février 2026 à 21h au Taquin (Toulouse)</em>
+								</p>
+								<p>Prenez le train pour Skaville !</p>
+								<p>L’octet haut-pyrénéen 2ble Barrel rencontre le sextet toulousain Mampy pour un voyage ska/jazz en direction de la Jamaïque. La soirée promet d’être chaude et ensoleillée !</p>
+								<a href="https://billetterie.festik.net/le-taquin/product/mampy-et-2ble-barrel" target="_blank" rel="noopener" autofocus class="button primary">Réserver</a>
 							</div>
-							<div class="col-6">
-							<p>In Jazz We Trust Prod présente :</p>
-							<p><strong>Mampy + 2ble Barrel : Take The 'Ska' Train !</strong></p>
-							<p>Prenez le train pour Skaville !</p>
-							<p>Le sextet toulousain Mampy rencontre l’octet haut-pyrénéen 2ble Barrel pour un voyage ska/jazz en direction de la Jamaïque. La soirée promet d’être chaude et ensoleillée !</p>
-							<a href="https://billetterie.festik.net/le-taquin/product/mampy-et-2ble-barrel" class="button primary">Réserver</a>
+							<div class="col-6 col-12-small">
+								<span class="image">
+									<img width="350px" loading="lazy" style="max-width: 100%;" src="/images/2ble-barrel/Mampy-2ble-Barrel-Take-The-Ska-Train-Le-Taquin-21-02-2026.png" alt="Affiche du concert de Mampy et 2ble Barrel au Taquin le 26 février 2026" />
+								</span>
 							</div>
 						</div>
 					</dialog>
@@ -242,9 +246,13 @@
 			<script src="/assets/js/main.js"></script>
 			<script src="/assets/js/bandsintown.js"></script>
 			<script>
-				const popup = document.getElementById('popup');
-				if (popup) {
-					setTimeout(() => { popup.showModal(); }, 2000);
+				const currentTime = Date.now();
+				const targetTime = new Date('2026-02-21T21:00:00').getTime();
+				if (currentTime < targetTime) {
+					const popup = document.getElementById('popup');
+					if (popup) {
+						setTimeout(() => { popup.showModal(); }, 2000);
+					}
 				}
 			</script>
 	</body>
