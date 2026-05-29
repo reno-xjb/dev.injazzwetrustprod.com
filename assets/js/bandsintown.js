@@ -17,6 +17,12 @@ const artistsAndAppIds = {
 		artistId: "id_15628432",
 		appId: "04aa449760082e70bc18eb1e6d1eae9d",
 	},
+	cetaces: {
+		name: `C<span class="acute">'</span>etac<span class="acute">'</span>es`,
+		link: "/cetaces",
+		artistId: "id_15648884",
+		appId: "60cd548be8d0ed105cec488911d03f33",
+	},
 };
 
 const fetchArtistEvents = async (artistId, appId, date) => {

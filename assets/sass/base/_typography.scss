@@ -50,6 +50,12 @@
 		color: _palette(secondary);
 		font-weight: _font(weight-secondary-bold);
 	}
+	.acute {
+		position: absolute;
+		rotate: 51deg;
+		margin-top: -2px;
+		margin-left: -5px;
+	}
 
 	em, i {
 		font-style: italic;
